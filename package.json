@@ -7,15 +7,15 @@
     "test": "make test"
   },
   "dependencies": {
-    "archiver": "~1.0.0",
-    "fs-extra": "~0.30.0",
-    "mongodb": "~2.1.18",
-    "nodemailer": "~2.4.2",
-    "winston": "~2.2.0"
+    "archiver": "^5.3.0",
+    "fs-extra": "^10.0.0",
+    "mongodb": "^3.6.9",
+    "nodemailer": "^6.6.1",
+    "winston": "^3.3.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeunMatt/backup-mongodb.git"
+    "url": "git+https://github.com/MNLaugh/backup-mongodb.git"
   },
   "keywords": [
     "backup-mongodb",
@@ -25,14 +25,10 @@
     "email",
     "zip"
   ],
-  "author": "Seun Matt <smatt382@gmail.com>",
+  "author": "MNLaugh <contact@mnlaugh.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SeunMatt/backup-mongodb/issues"
-  },
-  "homepage": "https://github.com/SeunMatt/backup-mongodb#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "mocha": "^8.4.0"
   }
 }
