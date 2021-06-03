@@ -8,34 +8,33 @@ var dbUri = "mongodb://127.0.0.1:27017/test";
 var basePath = "./backup";
 var Backup = require("../index.js");
 
-
+new Backup(dbUri, basePath).backup(console.log);
 // var dbAuth = {user: "seun", pass: "matthewE1"}
 
-describe("Backup", function() {
-
-	it("Performs backup of mongodb with no email config", function(done) {
-		expect( function() { new Backup(dbUri, basePath).backup(done);  }).to.not.throw(Error);
-		
-	});
-
-
-	it("Performs backup with email config", function(done) {
-
-		//=======WITH EMAIL CONFIG ===========
-		// UN COMMENT THE FOLLOWING TO USE WITH MAIL CONFIG
+//describe("Backup", function() {
+//
+//	it("Performs backup of mongodb with no email config", function(done) {
+//		expect( function() { new Backup(dbUri, basePath).backup(done);  }).to.not.throw(Error);
+//	});
 
 
-		var emailSubject = "DATABASE BACKUP"; 
-		var emailText = "This email contains an attachment of the backup of your mongodb in zip format";
-
-		var instruction = "To run the section for backup with email config of the test, open the test/test.js and supply your " +
-		" smtpOptions and emailOptions then uncomment the line " +
-		" expect( " +
-		"	function() { " +
-		"		new Backup(dbUri, basePath, smtpOptions, emailOptions).backup(done) " +
-		"	}).to.not.throw(Error); " ;
-
-		console.log("\n\n =====================\n" + instruction);
+	//it("Performs backup with email config", function(done) {
+//
+	//	//=======WITH EMAIL CONFIG ===========
+	//	// UN COMMENT THE FOLLOWING TO USE WITH MAIL CONFIG
+//
+//
+	//	var emailSubject = "DATABASE BACKUP"; 
+	//	var emailText = "This email contains an attachment of the backup of your mongodb in zip format";
+//
+	//	var instruction = "To run the section for backup with email config of the test, open the test/test.js and supply your " +
+	//	" smtpOptions and emailOptions then uncomment the line " +
+	//	" expect( " +
+	//	"	function() { " +
+	//	"		new Backup(dbUri, basePath, smtpOptions, emailOptions).backup(done) " +
+	//	"	}).to.not.throw(Error); " ;
+//
+	//	console.log("\n\n =====================\n" + instruction);
 		
 
 		
@@ -66,9 +65,6 @@ describe("Backup", function() {
 		// 	}).to.not.throw(Error);
 
 
-		done();
-
-	});
-
-
-});
+	//	done();
+	//});
+//});
